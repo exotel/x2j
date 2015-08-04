@@ -658,3 +658,23 @@ func ByteDocToTree(doc []byte) (*Node, error) {
 	return n, nil
 }
 
+func (n *Node) GetNodes() [] *Node {
+	        return n.nodes
+}
+
+func (n *Node) GetKey() string {
+	        return n.key
+}
+
+func (n *Node) GetVal() string {
+	        return n.val
+}
+
+func (n *Node) IsAttr() bool {
+	        return n.attr
+}
+
+func (n *Node) NodesCount() int {
+	        return len(n.nodes)
+}
+
